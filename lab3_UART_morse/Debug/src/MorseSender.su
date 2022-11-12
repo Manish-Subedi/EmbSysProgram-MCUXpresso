@@ -1,0 +1,14 @@
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\atomic_base.h:100:3:constexpr std::memory_order std::operator&(std::memory_order, std::__memory_order_modifier)	16	static
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\arm-none-eabi\thumb\v7-m\nofp\bits\gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	16	static
+../src/MorseSender.cpp:24:6:void SysTick_Handler()	8	static
+../src/MorseSender.cpp:31:6:void Sleep(int)	16	static
+../src/MorseSender.cpp:39:1:MorseSender::MorseSender(DigitalIoPin*, DigitalIoPin*)	24	static
+../src/MorseSender.cpp:42:6:void MorseSender::sendMorse(const char*, int)	32	static
+../src/MorseSender.cpp:48:6:void MorseSender::sendMorse(char, int)	40	static
+../src/MorseSender.cpp:89:1:MorseSender::~MorseSender()	16	static
+../src/MorseSender.cpp:89:1:virtual MorseSender::~MorseSender()	16	static
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\atomic_base.h:291:7:std::__atomic_base<_IntTp>::operator std::__atomic_base<_IntTp>::__int_type() const volatile [with _ITp = int]	24	static
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\atomic_base.h:321:7:std::__atomic_base<_IntTp>::__int_type std::__atomic_base<_IntTp>::operator--(int) volatile [with _ITp = int]	32	static
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\atomic_base.h:302:7:std::__atomic_base<_IntTp>::__int_type std::__atomic_base<_IntTp>::operator=(std::__atomic_base<_IntTp>::__int_type) volatile [with _ITp = int]	32	static
+../src/MorseSender.cpp:92:2:void __static_initialization_and_destruction_0(int, int)	16	static
+../src/MorseSender.cpp:92:2:cpp)	8	static

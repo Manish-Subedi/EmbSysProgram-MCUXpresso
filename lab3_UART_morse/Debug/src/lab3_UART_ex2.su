@@ -1,0 +1,4 @@
+C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc/core_cm3.h:1405:22:void NVIC_SetPriority(IRQn_Type, uint32_t)	16	static
+C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc/core_cm3.h:1532:26:uint32_t SysTick_Config(uint32_t)	16	static
+C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc/clock_15xx.h:500:20:void Chip_Clock_SetSysTickClockDiv(uint32_t)	16	static
+../src/lab3_UART_ex2.cpp:28:5:int main()	40	static
