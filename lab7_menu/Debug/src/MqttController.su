@@ -1,0 +1,13 @@
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\arm-none-eabi\thumb\v7-m\nofp\bits\gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	16	static
+../src/MqttController.cpp:12:1:MqttController::MqttController(void (*)(MessageData*))	16	static
+../src/MqttController.cpp:18:6:void MqttController::Mqtt_start(const char*, const char*, char*, int)	48	static
+../src/MqttController.cpp:36:1:MqttController::~MqttController()	16	static
+../src/MqttController.cpp:36:1:virtual MqttController::~MqttController()	16	static
+../src/MqttController.cpp:39:6:void MqttController::subscribe(const char*)	16	static
+../src/MqttController.cpp:44:5:int MqttController::publish(const char*, char*)	40	static
+../src/MqttController.cpp:59:5:int MqttController::publish(const char*, std::string)	24	static
+../src/MqttController.cpp:64:6:void MqttController::disconnect(MQTTClient*)	16	static
+../src/MqttController.cpp:75:6:void MqttController::yield(int)	16	static
+../src/MqttController.cpp:80:5:int MqttController::enquire_status()	16	static
+../src/MqttController.cpp:84:1:void __static_initialization_and_destruction_0(int, int)	24	static
+../src/MqttController.cpp:84:1:cpp)	8	static
