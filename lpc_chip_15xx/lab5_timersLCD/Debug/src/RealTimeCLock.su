@@ -1,0 +1,9 @@
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\arm-none-eabi\thumb\v7-m\nofp\bits\gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	16	static
+../src/RealTimeClock.cpp:14:1:RealTimeClock::RealTimeClock(int)	16	static
+../src/RealTimeClock.cpp:19:1:RealTimeClock::RealTimeClock(const tm*, int)	24	static
+../src/RealTimeClock.cpp:25:6:void RealTimeClock::getTime(tm*)	24	static
+../src/RealTimeClock.cpp:32:6:void RealTimeClock::tick()	16	static
+../src/RealTimeClock.cpp:50:1:RealTimeClock::~RealTimeClock()	16	static
+../src/RealTimeClock.cpp:50:1:virtual RealTimeClock::~RealTimeClock()	16	static
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\std_mutex.h:158:16:std::lock_guard<_Mutex>::lock_guard(std::lock_guard<_Mutex>::mutex_type&) [with _Mutex = Imutex]	16	static
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\std_mutex.h:164:7:std::lock_guard<_Mutex>::~lock_guard() [with _Mutex = Imutex]	16	static
