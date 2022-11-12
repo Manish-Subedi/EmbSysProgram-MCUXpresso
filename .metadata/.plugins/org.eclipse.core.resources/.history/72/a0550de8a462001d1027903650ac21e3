@@ -1,0 +1,219 @@
+/*
+===============================================================================
+ Name        : main.c
+ Author      : Manish Subedi
+ Version     :
+ Copyright   : $(copyright)
+ Description : main definition
+===============================================================================
+*/
+
+#if defined (__USE_LPCOPEN)
+#if defined(NO_BOARD_LIB)
+#include "chip.h"
+#else
+#include "board.h"
+#endif
+#endif
+
+#include <cr_section_macros.h>
+#include "SleepMilli.h"
+#include "DigitalIoPin.h"
+#include "Dice.h"
+#include <ctime>
+
+#define TICKRATE_HZ1 (1000)
+
+// TODO: insert other definitions and declarations here
+
+#if 0 /* lab 1 starts here */
+
+/* Write a program that reads the state of button SW1.
+ * When SW1 is pressed the program switches each of
+ * the leds on for one second in a sequence,
+ * first red, then green and then blue.
+ * After the sequence is finished all leds are switched off
+ * and the program starts reading SW1 again.
+ */
+
+int main(void) {
+
+#if defined (__USE_LPCOPEN)
+    // Read clock settings and update SystemCoreClock variable
+    SystemCoreClockUpdate();
+#if !defined(NO_BOARD_LIB)
+    // Set up and initialize all required blocks and
+    // functions related to the board hardware
+    Board_Init();
+#endif
+#endif
+
+    // TODO: insert code here
+    uint32_t sysTickRate;
+    Chip_Clock_SetSysTickClockDiv(1);
+    sysTickRate = Chip_Clock_GetSysTickClockRate();
+    SysTick_Config(sysTickRate / TICKRATE_HZ1);
+
+    Chip_IOCON_PinMuxSet(LPC_IOCON, 0, 17, (IOCON_MODE_PULLUP | IOCON_DIGMODE_EN | IOCON_INV_EN));
+    Chip_GPIO_SetPinDIRInput(LPC_GPIO, 0, 17);
+
+    SleepMilli sleep;
+
+    // Force the counter to be placed into memory
+    volatile static int i = 0;
+    // Enter an infinite loop, just incrementing a counter
+    while(1) {
+    	//read the state of the button
+    	bool state = Chip_GPIO_GetPinState(LPC_GPIO, 0, 17);
+    	//check if SW1 is pressed
+    	if(state){
+    		//set red LED on
+    		Board_LED_Set(0, true);
+    		sleep.Sleep(1000);
+    		Board_LED_Set(0, false);
+    		//set Green LED on
+    		Board_LED_Set(1, true);
+    		sleep.Sleep(1000);
+			Board_LED_Set(1, false);
+			//set Blue LED on
+			Board_LED_Set(2, true);
+			sleep.Sleep(1000);
+			Board_LED_Set(2, false);
+    	}
+        i++ ;
+        // "Dummy" NOP to allow source level single
+        // stepping of tight while() loop
+        __asm volatile ("nop");
+    }
+    return 0 ;
+}
+#endif /* lab 1 ends here */
+
+#if 0 /* lab 2 starts here */
+
+/* The program monitors the state of the pins and switches leds when a button is pressed.
+ * Check the button states at 10 ms intervals.
+ * When SW1 is pressed program the red led is on while the button is pressed.
+ * SW2 switches on green led and SW3 switches on blue led.
+ * The leds stay on as long as the controlling button is pressed.
+ * When the button is released the led switches off after one second.
+ * It must be possible to release buttons at different times.
+ */
+
+int main(void) {
+
+#if defined (__USE_LPCOPEN)
+    // Read clock settings and update SystemCoreClock variable
+    SystemCoreClockUpdate();
+#if !defined(NO_BOARD_LIB)
+    // Set up and initialize all required blocks and
+    // functions related to the board hardware
+    Board_Init();
+    // Set the LED to the state of "On"
+    //Board_LED_Set(0, true);
+#endif
+#endif
+
+    // TODO: insert code here
+    uint32_t sysTickRate;
+    Chip_Clock_SetSysTickClockDiv(1);
+    sysTickRate = Chip_Clock_GetSysTickClockRate();
+    SysTick_Config(sysTickRate / TICKRATE_HZ1);
+
+    DigitalIoPin SW1(0, 17, true, true, true);
+    DigitalIoPin SW2(1, 11, true, true, true);
+    DigitalIoPin SW3(1, 9, true, true, true);
+
+    SleepMilli sleep;
+    // Force the counter to be placed into memory
+    volatile static int i = 0;
+    // Enter an infinite loop, just incrementing a counter
+    while(1) {
+    	if(SW1.read()){
+    		Board_LED_Set(0, true);
+    		while(SW1.read());
+    		sleep.Sleep(1000);
+        	Board_LED_Set(0, false);
+    	}
+    	if(SW2.read()){
+    		Board_LED_Set(1, true);
+    		while(SW2.read());
+    		sleep.Sleep(1000);
+    		Board_LED_Set(1, false);
+    	}
+    	if(SW3.read()){
+    		Board_LED_Set(2, true);
+    		while(SW3.read());
+    		sleep.Sleep(1000);
+    		Board_LED_Set(2, false);
+    	}
+    	sleep.Sleep(10);
+        i++ ;
+        // "Dummy" NOP to allow source level single
+        // stepping of tight while() loop
+        __asm volatile ("nop");
+        //state = !state;
+    }
+    return 0 ;
+}
+
+#endif /* lab 2 ends here */
+
+#if 1 /* lab 3 starts here */
+
+int main(void) {
+
+#if defined (__USE_LPCOPEN)
+    // Read clock settings and update SystemCoreClock variable
+    SystemCoreClockUpdate();
+#if !defined(NO_BOARD_LIB)
+    // Set up and initialize all required blocks and
+    // functions related to the board hardware
+    Board_Init();
+    // Set the LED to the state of "On"
+    //Board_LED_Set(0, true);
+#endif
+#endif
+
+    // TODO: insert code here
+
+    uint32_t sysTickRate;
+    Chip_Clock_SetSysTickClockDiv(1);
+    sysTickRate = Chip_Clock_GetSysTickClockRate();
+    SysTick_Config(sysTickRate / TICKRATE_HZ1);
+
+    Dice play;
+
+    DigitalIoPin operate(0, 8, true, true, true);
+    DigitalIoPin test(1, 6, true, true, true);
+    /* krl modifica
+    DigitalIoPin operate(0, 8, DigitalIoPin::pullup, true);
+    DigitalIoPin test(1, 6, DigitalIoPin::pullup, true);
+    */
+    // Force the counter to be placed into memory
+    volatile static int i = 0;
+    // Enter an infinite loop, just incrementing a counter
+    while(1) {
+    	if(test.read()){
+    		play.Show(7);
+    		if(!test.read()){
+    			play.Show(0);
+    		}
+    	}
+    	else if(operate.read()){
+			play.Show(0);
+			while(operate.read());
+			play.Show(rand()%+1);
+		}
+        i++ ;
+        // "Dummy" NOP to allow source level single
+        // stepping of tight while() loop
+        __asm volatile ("nop");
+        //state = !state;
+
+    }
+    return 0 ;
+}
+#endif
+
+#endif /* lab 3 ends here */

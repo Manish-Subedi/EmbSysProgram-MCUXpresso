@@ -1,0 +1,212 @@
+/*
+===============================================================================
+ Name        : main.c
+ Author      : $(author)
+ Version     :
+ Copyright   : $(copyright)
+ Description : main definition
+===============================================================================
+*/
+
+#if defined (__USE_LPCOPEN)
+#if defined(NO_BOARD_LIB)
+#include "chip.h"
+#else
+#include "board.h"
+#endif
+#endif
+
+#include <cr_section_macros.h>
+
+#include "LpcUart.h"
+#include "DigitalIOPin.h"
+#include "ITM_write.h"
+#include "I2C.h"
+//#include "Sleep.h"
+
+#include <atomic>
+static volatile std::atomic_int counter;
+#ifdef __cplusplus
+extern "C" {
+#endif
+/*
+* @brief Handle interrupt from SysTick timer
+* @return Nothing
+*/
+
+void SysTick_Handler(void)
+{
+if(counter > 0) counter--;
+}
+#ifdef __cplusplus
+}
+#endif
+void Sleep(int ms)
+{
+counter = ms;
+while(counter > 0) {
+__WFI();
+}
+}
+#if 0 //ex 1 begins
+int main(void) {
+
+#if defined (__USE_LPCOPEN)
+    // Read clock settings and update SystemCoreClock variable
+    SystemCoreClockUpdate();
+#if !defined(NO_BOARD_LIB)
+    // Set up and initialize all required blocks and
+    // functions related to the board hardware
+    Board_Init();
+    // Set the LED to the state of "On"
+    Board_LED_Set(2, true);
+#endif
+#endif
+    ITM_init();
+    //Board_Startup();
+    // TODO: insert code here
+    LpcPinMap none = {-1, -1}; // unused pin has negative values in it
+	LpcPinMap txpin = { 0, 18 }; // transmit pin that goes to debugger's UART->USB converter
+	LpcPinMap rxpin = { 0, 13 }; // receive pin that goes to debugger's UART->USB converter
+	LpcUartConfig cfg_d = { LPC_USART0, 115200, UART_CFG_DATALEN_8 | UART_CFG_PARITY_NONE | UART_CFG_STOPLEN_1, false, txpin, rxpin, none, none };
+
+	LpcUart dbgu(cfg_d);
+	//ITMhandler itm();
+	DigitalIoPin SW3(1, 9, true, true, true);
+
+	// Force the counter to be placed into memory
+	volatile static int i = 0 ;
+
+	I2C_config cofg;
+	I2C i2c(cofg);
+	uint8_t tx[1];
+	uint8_t rx [1];
+
+	while(1){
+		if(SW3.read()){
+			char str[32];
+			tx[0] = 0x01; //command to let it know we want to read
+			//bool button = SW3.read()
+			while(SW3.read()){
+				Board_LED_Set(2, false);
+				Board_LED_Set(1, true);
+			}
+			if(!SW3.read()){
+				if(i2c.transaction(0x4A, tx, 1, rx, 1)){
+					tx[0] = 0x00; //read command
+					i2c.transaction(0x4A, tx, 1, rx, 1);
+					snprintf(str, 50, "Temperature: %d C\n", static_cast<signed char>(rx[0]));
+					ITM_write(str);
+					Board_LED_Set(2, true);
+					Board_LED_Set(1, false);
+
+				}
+				else{
+					ITM_write("error");
+				}
+			}
+		}
+
+		//Sleep(100);
+	    // Enter an infinite loop, just incrementing a counter
+		i++;
+        // "Dummy" NOP to allow source level single
+        // stepping of tight while() loop
+        //__asm volatile ("nop");
+    }
+    return 0 ;
+}
+#endif //ex 1 ends
+
+#if 1 //ex 2 begins
+int main(void) {
+
+#if defined (__USE_LPCOPEN)
+    // Read clock settings and update SystemCoreClock variable
+    SystemCoreClockUpdate();
+#if !defined(NO_BOARD_LIB)
+    // Set up and initialize all required blocks and
+    // functions related to the board hardware
+    Board_Init();
+    // Set the LED to the state of "On"
+    //Board_LED_Set(2, true);
+#endif
+#endif
+
+    //configure clock frequency to 1000Hz
+    	uint32_t sysTickRate;
+    	Chip_Clock_SetSysTickClockDiv(1);
+    	sysTickRate = Chip_Clock_GetSysTickClockRate();
+    	SysTick_Config(sysTickRate / 1000);
+
+    ITM_init();
+    //Board_Startup();
+    // TODO: insert code here
+    LpcPinMap none = {-1, -1}; // unused pin has negative values in it
+	LpcPinMap txpin = { 0, 18 }; // transmit pin that goes to debugger's UART->USB converter
+	LpcPinMap rxpin = { 0, 13 }; // receive pin that goes to debugger's UART->USB converter
+	LpcUartConfig cfg_d = { LPC_USART0, 115200, UART_CFG_DATALEN_8 | UART_CFG_PARITY_NONE | UART_CFG_STOPLEN_1, false, txpin, rxpin, none, none };
+
+	LpcUart dbgu(cfg_d);
+	//ITMhandler itm();
+	DigitalIoPin SW3(1, 9, true, true, true);
+
+	// Force the counter to be placed into memory
+	volatile static int i = 0 ;
+
+	I2C_config cofg;
+	I2C i2c(cofg);
+	uint8_t tx[1];
+	uint8_t tx_s[2] = {0x01, 0x80}; //0000 00001 and 1000 0000
+	uint8_t rx [1];
+
+	while(1){
+		if(SW3.read()){
+			char str[32];
+			tx[0] = 0x01; //0000 00001
+			while(SW3.read()){
+				Board_LED_Set(2, false);
+				Board_LED_Set(1, true);
+			}
+			if(!SW3.read()){
+				if(i2c.transaction(0x4A, tx, 1, rx, 1)){ //true in normal mode
+					tx[0] = 0x00; //read from tc74 0000 0000
+					i2c.transaction(0x4A, tx, 1, rx, 1);
+					snprintf(str, 50, "Temperature: %d C\n", static_cast<signed char>(rx[0]));
+					ITM_write(str);
+					Board_LED_Set(2, true);
+					Board_LED_Set(1, false);
+				}
+				else{
+				}
+			}
+		}
+		else {
+			//Sleep(5000);
+			if(!SW3.read()){
+				i2c.transaction(0x4a, tx_s, 1, rx, 1);
+				ITM_write("Standby mode\n");
+
+			}
+			else if(SW3.read()){
+				tx[0] = 0x01; //read from tc74 0000 0001
+				i2c.transaction(0x4A, tx, 1, rx, 1);
+			}
+		}
+
+
+		//Sleep(100);
+	    // Enter an infinite loop, just incrementing a counter
+		i++;
+        // "Dummy" NOP to allow source level single
+        // stepping of tight while() loop
+        //__asm volatile ("nop");
+    }
+    return 0 ;
+}
+//check status of SW3
+
+	//put sensor to standby mode
+
+
+#endif //ex 2 ends

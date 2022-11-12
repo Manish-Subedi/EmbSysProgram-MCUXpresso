@@ -1,0 +1,62 @@
+17:54:26 **** Build of configuration Debug for project lab7_menu ****
+make -r -j4 all 
+Building file: ../src/DigitalIoPin.cpp
+Building file: ../src/MqttController.cpp
+Building file: ../src/lab7_main.cpp
+Invoking: MCU C++ Compiler
+Building file: ../src/sysinit.c
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/DigitalIoPin.d" -MT"src/DigitalIoPin.o" -MT"src/DigitalIoPin.d" -o "src/DigitalIoPin.o" "../src/DigitalIoPin.cpp"
+Invoking: MCU C++ Compiler
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/MqttController.d" -MT"src/MqttController.o" -MT"src/MqttController.d" -o "src/MqttController.o" "../src/MqttController.cpp"
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/lab7_main.d" -MT"src/lab7_main.o" -MT"src/lab7_main.d" -o "src/lab7_main.o" "../src/lab7_main.cpp"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=c11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/sysinit.d" -MT"src/sysinit.o" -MT"src/sysinit.d" -o "src/sysinit.o" "../src/sysinit.c"
+Finished building: ../src/sysinit.c
+Finished building: ../src/DigitalIoPin.cpp
+ 
+ 
+Building file: ../orig/src/src/DecimalEdit.cpp
+Building file: ../orig/src/src/DigitalIoPin.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../orig/src/src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"orig/src/src/DecimalEdit.d" -MT"orig/src/src/DecimalEdit.o" -MT"orig/src/src/DecimalEdit.d" -o "orig/src/src/DecimalEdit.o" "../orig/src/src/DecimalEdit.cpp"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../orig/src/src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"orig/src/src/DigitalIoPin.d" -MT"orig/src/src/DigitalIoPin.o" -MT"orig/src/src/DigitalIoPin.d" -o "orig/src/src/DigitalIoPin.o" "../orig/src/src/DigitalIoPin.cpp"
+Finished building: ../orig/src/src/DigitalIoPin.cpp
+ 
+Building file: ../orig/src/src/IntegerEdit.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../orig/src/src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"orig/src/src/IntegerEdit.d" -MT"orig/src/src/IntegerEdit.o" -MT"orig/src/src/IntegerEdit.d" -o "orig/src/src/IntegerEdit.o" "../orig/src/src/IntegerEdit.cpp"
+../src/lab7_main.cpp: In function 'int main()':
+../src/lab7_main.cpp:58:3: error: expected ';' before 'SystemCoreClockUpdate'
+   58 | 00    SystemCoreClockUpdate();
+      |   ^   ~~~~~~~~~~~~~~~~~~~~~
+      |   ;
+../src/lab7_main.cpp:58:1: warning: statement has no effect [-Wunused-value]
+   58 | 00    SystemCoreClockUpdate();
+      | ^~
+../src/lab7_main.cpp:160:7: warning: unused variable 'buffer' [-Wunused-variable]
+  160 |  char buffer[130];
+      |       ^~~~~~
+In file included from ../src/MqttController.cpp:9:
+../src/MainHeader.h:52:13: warning: 'mqtt_message_arrived' defined but not used [-Wunused-variable]
+   52 | static bool mqtt_message_arrived(false);
+      |             ^~~~~~~~~~~~~~~~~~~~
+Finished building: ../orig/src/src/DecimalEdit.cpp
+ 
+Building file: ../orig/src/src/KillerEdit.cpp
+make[1]: *** [src/subdir.mk:76: src/lab7_main.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../orig/src/src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"orig/src/src/KillerEdit.d" -MT"orig/src/src/KillerEdit.o" -MT"orig/src/src/KillerEdit.d" -o "orig/src/src/KillerEdit.o" "../orig/src/src/KillerEdit.cpp"
+Finished building: ../orig/src/src/IntegerEdit.cpp
+ 
+Finished building: ../src/MqttController.cpp
+ 
+Finished building: ../orig/src/src/KillerEdit.cpp
+ 
+make: *** [makefile:58: all] Error 2
+"make -r -j4 all" terminated with exit code 2. Build might be incomplete.
+
+17:54:28 Build Failed. 4 errors, 3 warnings. (took 1s.891ms)
+

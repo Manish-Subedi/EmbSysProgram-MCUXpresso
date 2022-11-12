@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;lab3_UART_morse/src/lab3_UART_ex1.cpp&apos;" deleteContents="false" description="Delete resource &apos;lab3_UART_morse/src/lab3_UART_ex1.cpp&apos;" element1="/lab3_UART_morse/src/lab3_UART_ex1.cpp" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1664025613698"/>
+</session>

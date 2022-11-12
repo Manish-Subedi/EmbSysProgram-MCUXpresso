@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;lab7_menu/src/paho.mqtt.embedded-c&apos; to &apos;paho.mqtt&apos;" description="Rename resource &apos;paho.mqtt.embedded-c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/paho.mqtt.embedded-c" name="paho.mqtt" stamp="1666707892534" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;lab7_menu/src/paho.mqtt&apos; to &apos;paho-mqtt&apos;" description="Rename resource &apos;paho.mqtt&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/paho.mqtt" name="paho-mqtt" stamp="1666707913118" updateReferences="true"/>
+</session>

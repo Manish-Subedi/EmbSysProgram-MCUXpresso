@@ -1,0 +1,53 @@
+17:54:30 **** Build of configuration Debug for project lab3_UART_morse ****
+make -r -j4 all 
+Building file: ../src/DigitalIoPin.cpp
+Building file: ../src/MorseSender.cpp
+Building file: ../src/main_uart.cpp
+Invoking: MCU C++ Compiler
+Invoking: MCU C++ Compiler
+Building file: ../src/sysinit.c
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/DigitalIoPin.d" -MT"src/DigitalIoPin.o" -MT"src/DigitalIoPin.d" -o "src/DigitalIoPin.o" "../src/DigitalIoPin.cpp"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/MorseSender.d" -MT"src/MorseSender.o" -MT"src/MorseSender.d" -o "src/MorseSender.o" "../src/MorseSender.cpp"
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/main_uart.d" -MT"src/main_uart.o" -MT"src/main_uart.d" -o "src/main_uart.o" "../src/main_uart.cpp"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=c11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/sysinit.d" -MT"src/sysinit.o" -MT"src/sysinit.d" -o "src/sysinit.o" "../src/sysinit.c"
+../src/main_uart.cpp:34:1: warning: "/*" within comment [-Wcomment]
+   34 | /*
+      |  
+Finished building: ../src/DigitalIoPin.cpp
+Finished building: ../src/sysinit.c
+ 
+ 
+Finished building: ../src/main_uart.cpp
+ 
+In file included from ../src/MorseSender.cpp:8:
+../src/MorseSender.h: In constructor 'MorseSender::MorseSender(DigitalIoPin*, DigitalIoPin*)':
+../src/MorseSender.h:20:17: warning: 'MorseSender::red' will be initialized after [-Wreorder]
+   20 |   DigitalIoPin *red;
+      |                 ^~~
+../src/MorseSender.h:19:17: warning:   'DigitalIoPin* MorseSender::a0' [-Wreorder]
+   19 |   DigitalIoPin *a0;
+      |                 ^~
+../src/MorseSender.cpp:39:1: warning:   when initialized here [-Wreorder]
+   39 | MorseSender::MorseSender(DigitalIoPin *red=nullptr, DigitalIoPin *a0=nullptr): red{red}, a0{a0} {}
+      | ^~~~~~~~~~~
+Finished building: ../src/MorseSender.cpp
+ 
+Building target: lab3_UART_morse.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\Debug" -L"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\Debug" -Xlinker -Map="lab3_UART_morse.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "lab3_UART_morse_Debug.ld" -o "lab3_UART_morse.axf"  ./src/DigitalIoPin.o ./src/LpcUart.o ./src/MorseSender.o ./src/cr_cpp_config.o ./src/cr_startup_lpc15xx.o ./src/crp.o ./src/main_uart.o ./src/sysinit.o   -llpc_board_nxp_lpcxpresso_1549 -llpc_chip_15xx
+Memory region         Used Size  Region Size  %age Used
+       MFlash256:       11012 B       256 KB      4.20%
+      Ram0_16_32:        2216 B        32 KB      6.76%
+          Ram2_4:          0 GB         4 KB      0.00%
+Finished building target: lab3_UART_morse.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "lab3_UART_morse.axf"; # arm-none-eabi-objcopy -v -O binary "lab3_UART_morse.axf" "lab3_UART_morse.bin" ; # checksum -p LPC1549 -d "lab3_UART_morse.bin";
+   text	   data	    bss	    dec	    hex	filename
+   8900	   2112	    104	  11116	   2b6c	lab3_UART_morse.axf
+ 
+
+17:54:32 Build Finished. 0 errors, 4 warnings. (took 1s.173ms)
+

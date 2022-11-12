@@ -1,0 +1,111 @@
+/*
+===============================================================================
+ Name        : main.c
+ Author      : Manish Subedi
+ Version     :
+ Copyright   : $(copyright)
+ Description : main definition
+===============================================================================
+*/
+#if 0
+#if defined (__USE_LPCOPEN)
+#if defined(NO_BOARD_LIB)
+#include "chip.h"
+#else
+#include "board.h"
+#endif
+#endif
+
+#include <cr_section_macros.h>
+#include <cstdlib>
+#include <ctime>
+
+#include "DigitalIoPin.h"
+#include "Dice.h"
+
+
+// TODO: insert other include files here
+#include <atomic>
+static volatile std::atomic_int counter;
+#ifdef __cplusplus
+extern "C" {
+#endif
+/*
+* @brief Handle interrupt from SysTick timer
+* @return Nothing
+*/
+
+void SysTick_Handler(void)
+{
+	if(counter > 0) counter--;
+}
+#ifdef __cplusplus
+}
+#endif
+void Sleep(int ms)
+{
+	counter = ms;
+		while(counter > 0) {
+			__WFI();
+		}
+}
+
+#define TICKRATE_HZ1 (1000)
+
+// TODO: insert other definitions and declarations here
+
+int main(void) {
+
+#if defined (__USE_LPCOPEN)
+    // Read clock settings and update SystemCoreClock variable
+    SystemCoreClockUpdate();
+#if !defined(NO_BOARD_LIB)
+    // Set up and initialize all required blocks and
+    // functions related to the board hardware
+    Board_Init();
+    // Set the LED to the state of "On"
+    //Board_LED_Set(0, true);
+#endif
+#endif
+
+    // TODO: insert code here
+
+    uint32_t sysTickRate;
+    Chip_Clock_SetSysTickClockDiv(1);
+    sysTickRate = Chip_Clock_GetSysTickClockRate();
+    SysTick_Config(sysTickRate / TICKRATE_HZ1);
+
+    Dice play;
+
+    DigitalIoPin operate(0, 8, true, true, true);
+    DigitalIoPin test(1, 6, true, true, true);
+    /* krl modifica
+    DigitalIoPin operate(0, 8, DigitalIoPin::pullup, true);
+    DigitalIoPin test(1, 6, DigitalIoPin::pullup, true);
+    */
+    // Force the counter to be placed into memory
+    volatile static int i = 0;
+    // Enter an infinite loop, just incrementing a counter
+    while(1) {
+    	if(test.read()){
+    		play.Show(7);
+
+    		if(!test.read()){
+    			play.Show(0);
+    		}
+    	}
+    	else if(operate.read()){
+			play.Show(0);
+			while(operate.read());
+			play.Show(rand()%+1);
+		}
+        i++ ;
+        // "Dummy" NOP to allow source level single
+        // stepping of tight while() loop
+        __asm volatile ("nop");
+        //state = !state;
+
+    }
+    return 0 ;
+}
+#endif

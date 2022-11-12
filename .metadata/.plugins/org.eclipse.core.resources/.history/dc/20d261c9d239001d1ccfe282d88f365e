@@ -1,0 +1,255 @@
+/*
+===============================================================================
+ Name        : main.c
+ Author      : Manish Subedi
+ Version     :
+ Copyright   : $(copyright)
+ Description : main definition
+===============================================================================
+*/
+
+#if defined (__USE_LPCOPEN)
+#if defined(NO_BOARD_LIB)
+#include "chip.h"
+#else
+#include "board.h"
+#endif
+#endif
+
+#if 0 //exercise-1 starts here
+
+#include <cr_section_macros.h>
+#include <ctype.h>
+#include "DigitalIoPin.h"
+
+#include <atomic>
+static volatile std::atomic_int counter;
+#ifdef __cplusplus
+extern "C" {
+#endif
+/*
+* @brief Handle interrupt from SysTick timer
+* @return Nothing
+*/
+
+void SysTick_Handler(void)
+{
+if(counter > 0) counter--;
+}
+#ifdef __cplusplus
+}
+#endif
+void Sleep(int ms)
+{
+counter = ms;
+while(counter > 0) {
+__WFI();
+}
+}
+
+#define TICKRATE_HZ1 (1000)
+
+int main(void) {
+
+#if defined (__USE_LPCOPEN)
+    // Read clock settings and update SystemCoreClock variable
+    SystemCoreClockUpdate();
+#if !defined(NO_BOARD_LIB)
+    // Set up and initialize all required blocks and
+    // functions related to the board hardware
+    Board_Init();
+#endif
+#endif
+
+    //configure clock frequency to 1000Hz
+	uint32_t sysTickRate;
+	Chip_Clock_SetSysTickClockDiv(1);
+	sysTickRate = Chip_Clock_GetSysTickClockRate();
+	SysTick_Config(sysTickRate / TICKRATE_HZ1);
+
+	// instantiate objects for SW1 and LED(green)
+	DigitalIoPin sw1(0, 17, true, true, true); //inverted digitalIO pin
+	DigitalIoPin green(0, 3, false, false, true);
+
+    Board_UARTPutSTR("\r\nHello, World\r\n");
+    Board_UARTPutChar('!');
+    Board_UARTPutChar('\r');
+    Board_UARTPutChar('\n');
+
+    //variable to read the char input into
+    int c;
+    while(1) {
+    	// read the switch press
+    	if(sw1.read()) {
+    		while(sw1.read());
+    		//toggle the status of the LED
+    		Board_LED_Toggle(1); //green is at LED[1]
+    	}
+    	// read the char input from Putty
+        c = Board_UARTGetChar();
+        if(c != EOF){
+        	if(c == '\r') Board_UARTPutChar('\n');
+			if(g.read()){	// Convert to uppercase if LED is ON
+				Board_UARTPutChar(toupper(c));
+			}
+			else Board_UARTPutChar(tolower(c));	//convert to lowercase if LED is OFF
+        	if(c == '\n') Board_UARTPutChar('\r');
+        }
+    }
+    Sleep(100);
+    return 0 ;
+}
+#endif //exercise-1 ends here
+
+#if 0 //exercise-2 starts here
+
+#include <cr_section_macros.h>
+#include <ctype.h> //toupper()
+#include "DigitalIoPin.h"
+#include "MorseSender.h"
+#include <cstring> //check if the code runs without this**********
+#include <stdlib.h>
+
+#define TICKRATE_HZ1 (1000)
+
+#define LEN (80)
+
+int main(void) {
+
+#if defined (__USE_LPCOPEN)
+    // Read clock settings and update SystemCoreClock variable
+    SystemCoreClockUpdate();
+#if !defined(NO_BOARD_LIB)
+    // Set up and initialize all required blocks and
+    // functions related to the board hardware
+    Board_Init();
+#endif
+#endif
+
+    //configure clock frequency to 1000Hz
+	uint32_t sysTickRate;
+	Chip_Clock_SetSysTickClockDiv(1);
+	sysTickRate = Chip_Clock_GetSysTickClockRate();
+	SysTick_Config(sysTickRate / TICKRATE_HZ1);
+
+	MorseSender obj;
+
+	obj.a0->write(0);
+	int i=0;
+
+	//variable to read the char input into
+	int c;
+	//takes max 80 characters or reads a line feed
+	//c = Board_UARTGetChar();
+	while(1){
+		Board_UARTPutChar('\r');
+		Board_UARTPutChar('\n');
+		while(1){
+			// read the char input
+			c = Board_UARTGetChar();
+
+			if(c != EOF)
+			{
+				if(i == (LEN-1) || c == '\r')
+				{
+					Board_UARTPutChar('\r');
+					Board_UARTPutChar('\n');
+					Board_UARTPutSTR("End of session! Begin writing to start over!\r\n");
+					break;
+				}
+				else
+				{
+					Board_UARTPutChar(c);
+					/*
+					// if an alphabet or number
+					if((newChar >= 'A' && newChar <= 'Z') || (newChar >= 48 && newChar <= 57)) {
+						str[i] = newChar;
+					}
+					// if a space
+					else if (c == 32){
+						str[i] = ' ';
+					}
+					// other characters to X
+					else str[i] = 'X';
+					*/
+					obj.sendMorse(c, 50);
+					i++;
+				}
+			}
+		}
+
+	}
+	return 0 ;
+}
+#endif //exercise-2 ends here
+
+//Interrupt Service Routine
+#if 1 //exercise 3 begins here
+
+#include <cr_section_macros.h>
+
+#include <cstring>
+#include "DigitalIoPin.h"
+#include "MorseSender.h"
+//#include <stdlib.h>
+#include "lpcUart.h"
+
+#define TICKRATE_HZ1 (1000)
+
+#define LEN 80
+
+volatile static int i;
+
+int main(void) {
+
+#if defined (__USE_LPCOPEN)
+    // Read clock settings and update SystemCoreClock variable
+    SystemCoreClockUpdate();
+#if !defined(NO_BOARD_LIB)
+    // Set up and initialize all required blocks and
+    // functions related to the board hardware
+    Board_Init();
+#endif
+#endif
+
+    //configure clock frequency to 1000Hz
+	uint32_t sysTickRate;
+	Chip_Clock_SetSysTickClockDiv(1);
+	sysTickRate = Chip_Clock_GetSysTickClockRate();
+	SysTick_Config(sysTickRate / TICKRATE_HZ1);
+
+	LpcPinMap none = {-1, -1}; // unused pin has negative values in it
+	LpcPinMap txpin = { 0, 18 }; // transmit pin that goes to debugger's UART->USB converter
+	LpcPinMap rxpin = { 0, 13 }; // receive pin that goes to debugger's UART->USB converter
+	LpcUartConfig cfg = { LPC_USART0, 115200, UART_CFG_DATALEN_8 | UART_CFG_PARITY_NONE | UART_CFG_STOPLEN_1, false, txpin, rxpin, none, none };
+
+	LpcUart dbgu(cfg);
+
+	MorseSender obj;
+
+	//dbgu.write("Hello balabla!\n");
+	//obj.sendMorse("Hello balabla!\n", 50);
+
+	int total_char = 0; //number of char read
+	char buffer[LEN]; //limit the reading to 80 chars
+	//int wpm = 60;
+
+
+	while(1){
+		total_char = dbgu.read(buffer, LEN);
+		for(int m = 0; i<=total_char; i++){
+			dbgu.write(buffer);
+		}
+		total_char = 0;
+
+		/*if(buffer[i] != EOF){
+
+		}*/
+	        i++;
+	        __asm volatile ("nop");
+	    }
+
+	return 0;
+};
+
+#endif // exercise 3 ends here

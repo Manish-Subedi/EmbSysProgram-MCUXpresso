@@ -1,0 +1,87 @@
+/*
+ * morseSender.cpp
+ *
+ *  Created on: 14 Sep 2022
+ *      Author: Manish
+ */
+
+#include "MorseSender.h"
+#include "DigitalIoPin.h"
+#include <atomic>
+#include "chip.h"
+#include <ctype.h>
+#include <String>
+
+static volatile std::atomic_int counter;
+#ifdef __cplusplus
+extern "C" {
+#endif
+/*
+* @brief Handle interrupt from SysTick timer
+* @return Nothing
+*/
+
+void SysTick_Handler(void)
+{
+if(counter > 0) counter--;
+}
+#ifdef __cplusplus
+}
+#endif
+void Sleep(int ms)
+{
+counter = ms;
+while(counter > 0) {
+__WFI();
+}
+}
+
+MorseSender::MorseSender() {
+	a0 = new DigitalIoPin(0, 8, false, false, false);
+	red = new DigitalIoPin(0, 25, true, true, true);
+};
+
+void MorseSender::sendMorse(const char *str, int dot_len){
+	for(int i = 0; str[i] != 0; i++) {
+			sendMorse((str[i]), dot_len);
+		}
+};
+
+void MorseSender::sendMorse(char c, int dot_len){
+
+	if(isspace(c)){
+		a0->write(false);
+		//inter word gap
+		Sleep(4 * dot_len);
+	}
+	else{
+		int check = 0;
+		char e = toupper(c);
+		do{
+			for(int k=0; ITU_morse[k].symbol != 0; k++){
+				if(e == ITU_morse[k].symbol){
+					for(int m=0; ITU_morse[k].code[m] != 0; m++){
+						a0->write(true);
+						red->write(true);
+						Sleep(ITU_morse[k].code[m] * dot_len);
+						a0->write(false);
+						//inter-element gap
+						Sleep(1 * dot_len);
+						red->write(false);
+					}
+					break; //breaks the for loop
+					check++;
+				}
+			}
+			e = 'X';
+		} while(check == 0);
+	//inter letter gap
+	Sleep(2 * dot_len);
+	}
+};
+
+MorseSender::~MorseSender() {
+	delete a0;
+	delete red;
+};
+

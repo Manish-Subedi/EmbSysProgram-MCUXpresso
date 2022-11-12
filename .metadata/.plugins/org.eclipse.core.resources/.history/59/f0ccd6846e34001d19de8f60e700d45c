@@ -1,0 +1,100 @@
+/*
+===============================================================================
+ Name        : main.c
+ Author      : Manish Subedi
+ Version     :
+ Copyright   : $(copyright)
+ Description : main definition
+===============================================================================
+*/
+
+#if defined (__USE_LPCOPEN)
+#if defined(NO_BOARD_LIB)
+#include "chip.h"
+#else
+#include "board.h"
+#endif
+#endif
+
+#include <cr_section_macros.h>
+#include <ctype.h>
+#include "DigitalIoPin.h"
+
+#include <atomic>
+static volatile std::atomic_int counter;
+#ifdef __cplusplus
+extern "C" {
+#endif
+/*
+* @brief Handle interrupt from SysTick timer
+* @return Nothing
+*/
+
+void SysTick_Handler(void)
+{
+if(counter > 0) counter--;
+}
+#ifdef __cplusplus
+}
+#endif
+void Sleep(int ms)
+{
+counter = ms;
+while(counter > 0) {
+__WFI();
+}
+}
+
+#define TICKRATE_HZ1 (1000)
+
+int main(void) {
+
+#if defined (__USE_LPCOPEN)
+    // Read clock settings and update SystemCoreClock variable
+    SystemCoreClockUpdate();
+#if !defined(NO_BOARD_LIB)
+    // Set up and initialize all required blocks and
+    // functions related to the board hardware
+    Board_Init();
+#endif
+#endif
+
+    //configure clock frequency to 1000Hz
+	uint32_t sysTickRate;
+	Chip_Clock_SetSysTickClockDiv(1);
+	sysTickRate = Chip_Clock_GetSysTickClockRate();
+	SysTick_Config(sysTickRate / TICKRATE_HZ1);
+
+	// instantiate objects for SW1 and LED(green)
+	DigitalIoPin sw1(0, 17, true, true, true); //inverted digitalIO pin
+	DigitalIoPin g(0, 3, false, false, true);
+
+    Board_UARTPutSTR("\r\nHello, World\r\n");
+    Board_UARTPutChar('!');
+    Board_UARTPutChar('\r');
+    Board_UARTPutChar('\n');
+
+    //variable to read the char input into
+    int c;
+    while(1) {
+    	// read the switch press
+    	if(sw1.read()) {
+    		while(sw1.read());
+    		//toggle the status of the LED
+    		Board_LED_Toggle(1);
+    	}
+    	// read the char input from Putty
+        c = Board_UARTGetChar();
+        if(c != EOF){
+        	if(c == '\r') Board_UARTPutChar('\n');
+			if(g.read()){	// Convert to uppercase if LED is ON
+				Board_UARTPutChar(toupper(c));
+			}
+			else Board_UARTPutChar(tolower(c));	//convert to lowercase if LED is OFF
+        	if(c == '\n') Board_UARTPutChar('\r');
+        }
+    }
+    Sleep(100);
+    return 0 ;
+}
+

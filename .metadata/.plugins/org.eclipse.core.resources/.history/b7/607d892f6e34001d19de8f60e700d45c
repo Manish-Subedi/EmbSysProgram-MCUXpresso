@@ -1,0 +1,19 @@
+/*
+ * morseSender.cpp
+ *
+ *  Created on: 14 Sep 2022
+ *      Author: Manish
+ */
+
+#include "MorseSender.h"
+#include "DigitalIoPin.h"
+
+morseSender::morseSender() {
+	a0 = new DigitalIoPin
+
+}
+
+morseSender::~morseSender() {
+	// TODO Auto-generated destructor stub
+}
+

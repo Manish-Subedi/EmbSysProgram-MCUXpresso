@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;lab5_timersLCD/src/lab5_timersLCD.cpp&apos; to &apos;lab5_main.cpp&apos;" description="Rename resource &apos;lab5_timersLCD.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/lab5_timersLCD.cpp" name="lab5_main.cpp" stamp="1666127685737" updateReferences="true"/>
+</session>

@@ -1,0 +1,34 @@
+17:54:29 **** Build of configuration Debug for project lab4_I2C ****
+make -r -j4 all 
+Building file: ../src/DigitalIOPin.cpp
+Building file: ../src/lab4_I2C.cpp
+Building file: ../src/sysinit.c
+Invoking: MCU C++ Compiler
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/DigitalIOPin.d" -MT"src/DigitalIOPin.o" -MT"src/DigitalIOPin.d" -o "src/DigitalIOPin.o" "../src/DigitalIOPin.cpp"
+Invoking: MCU C Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/lab4_I2C.d" -MT"src/lab4_I2C.o" -MT"src/lab4_I2C.d" -o "src/lab4_I2C.o" "../src/lab4_I2C.cpp"
+arm-none-eabi-gcc -std=c11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/sysinit.d" -MT"src/sysinit.o" -MT"src/sysinit.d" -o "src/sysinit.o" "../src/sysinit.c"
+Finished building: ../src/lab4_I2C.cpp
+ 
+Finished building: ../src/sysinit.c
+ 
+Finished building: ../src/DigitalIOPin.cpp
+ 
+Building target: lab4_I2C.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\Debug" -L"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\Debug" -Xlinker -Map="lab4_I2C.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "lab4_I2C_Debug.ld" -o "lab4_I2C.axf"  ./src/DigitalIOPin.o ./src/I2C.o ./src/ITM_write.o ./src/LpcUart.o ./src/Neon.o ./src/cr_cpp_config.o ./src/cr_startup_lpc15xx.o ./src/crp.o ./src/lab4_I2C.o ./src/sysinit.o   -llpc_board_nxp_lpcxpresso_1549 -llpc_chip_15xx
+c:/nxp/mcuxpressoide_11.5.0_7232/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld.exe: ./src/cr_startup_lpc15xx.o: in function `ResetISR':
+C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lab4_I2C\Debug/../src/cr_startup_lpc15xx.cpp:429: undefined reference to `main'
+Memory region         Used Size  Region Size  %age Used
+       MFlash256:        3420 B       256 KB      1.30%
+         Ram0_16:          40 B        16 KB      0.24%
+         Ram1_16:          0 GB        16 KB      0.00%
+          Ram2_4:          0 GB         4 KB      0.00%
+collect2.exe: error: ld returned 1 exit status
+make[1]: *** [makefile:62: lab4_I2C.axf] Error 1
+make: *** [makefile:53: all] Error 2
+"make -r -j4 all" terminated with exit code 2. Build might be incomplete.
+
+17:54:30 Build Failed. 4 errors, 0 warnings. (took 832ms)
+

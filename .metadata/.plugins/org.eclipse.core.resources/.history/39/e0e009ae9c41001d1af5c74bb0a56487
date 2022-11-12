@@ -1,0 +1,25 @@
+/*
+ * State.h
+ *
+ *  Created on: 30 Sep 2022
+ *      Author: Manish
+ */
+
+#ifndef STATE_H_
+#define STATE_H_
+#include "DigitalIoPin.h"
+class State {
+public:
+	State(DigitalIoPin *led_1, DigitalIoPin *led_2, DigitalIoPin *led_3);
+	virtual ~State();
+	void toggleState(State &state);
+	enum state { eInit, eLunch, eNight, eCold };
+private:
+	state currentState;
+	bool state = false;
+	DigitalIoPin *led_1;
+	DigitalIoPin *led_2;
+	DigitalIoPin *led_3;
+};
+
+#endif /* STATE_H_ */

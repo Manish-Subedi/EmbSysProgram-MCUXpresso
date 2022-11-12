@@ -1,0 +1,298 @@
+04:24:05 **** Incremental Build of configuration Debug for project ventilation_project ****
+make -r -j4 all 
+Building file: ../src/paho_mqtt/MQTTPacket/src/MQTTConnectClient.c
+Building file: ../src/paho_mqtt/MQTTPacket/src/MQTTConnectServer.c
+Building file: ../src/paho_mqtt/MQTTPacket/src/MQTTDeserializePublish.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=c11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/paho_mqtt/MQTTPacket/src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/paho_mqtt/MQTTPacket/src/MQTTConnectClient.d" -MT"src/paho_mqtt/MQTTPacket/src/MQTTConnectClient.o" -MT"src/paho_mqtt/MQTTPacket/src/MQTTConnectClient.d" -o "src/paho_mqtt/MQTTPacket/src/MQTTConnectClient.o" "../src/paho_mqtt/MQTTPacket/src/MQTTConnectClient.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=c11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/paho_mqtt/MQTTPacket/src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/paho_mqtt/MQTTPacket/src/MQTTConnectServer.d" -MT"src/paho_mqtt/MQTTPacket/src/MQTTConnectServer.o" -MT"src/paho_mqtt/MQTTPacket/src/MQTTConnectServer.d" -o "src/paho_mqtt/MQTTPacket/src/MQTTConnectServer.o" "../src/paho_mqtt/MQTTPacket/src/MQTTConnectServer.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=c11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/paho_mqtt/MQTTPacket/src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/paho_mqtt/MQTTPacket/src/MQTTDeserializePublish.d" -MT"src/paho_mqtt/MQTTPacket/src/MQTTDeserializePublish.o" -MT"src/paho_mqtt/MQTTPacket/src/MQTTDeserializePublish.d" -o "src/paho_mqtt/MQTTPacket/src/MQTTDeserializePublish.o" "../src/paho_mqtt/MQTTPacket/src/MQTTDeserializePublish.c"
+Building file: ../src/paho_mqtt/MQTTPacket/src/MQTTFormat.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=c11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/paho_mqtt/MQTTPacket/src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/paho_mqtt/MQTTPacket/src/MQTTFormat.d" -MT"src/paho_mqtt/MQTTPacket/src/MQTTFormat.o" -MT"src/paho_mqtt/MQTTPacket/src/MQTTFormat.d" -o "src/paho_mqtt/MQTTPacket/src/MQTTFormat.o" "../src/paho_mqtt/MQTTPacket/src/MQTTFormat.c"
+Finished building: ../src/paho_mqtt/MQTTPacket/src/MQTTConnectServer.c
+Finished building: ../src/paho_mqtt/MQTTPacket/src/MQTTConnectClient.c
+Finished building: ../src/paho_mqtt/MQTTPacket/src/MQTTDeserializePublish.c
+ 
+ 
+ 
+Building file: ../src/paho_mqtt/MQTTPacket/src/MQTTPacket.c
+Building file: ../src/paho_mqtt/MQTTPacket/src/MQTTSerializePublish.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=c11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/paho_mqtt/MQTTPacket/src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/paho_mqtt/MQTTPacket/src/MQTTPacket.d" -MT"src/paho_mqtt/MQTTPacket/src/MQTTPacket.o" -MT"src/paho_mqtt/MQTTPacket/src/MQTTPacket.d" -o "src/paho_mqtt/MQTTPacket/src/MQTTPacket.o" "../src/paho_mqtt/MQTTPacket/src/MQTTPacket.c"
+Invoking: MCU C Compiler
+Building file: ../src/paho_mqtt/MQTTPacket/src/MQTTSubscribeClient.c
+arm-none-eabi-gcc -std=c11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/paho_mqtt/MQTTPacket/src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/paho_mqtt/MQTTPacket/src/MQTTSerializePublish.d" -MT"src/paho_mqtt/MQTTPacket/src/MQTTSerializePublish.o" -MT"src/paho_mqtt/MQTTPacket/src/MQTTSerializePublish.d" -o "src/paho_mqtt/MQTTPacket/src/MQTTSerializePublish.o" "../src/paho_mqtt/MQTTPacket/src/MQTTSerializePublish.c"
+Finished building: ../src/paho_mqtt/MQTTPacket/src/MQTTFormat.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=c11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/paho_mqtt/MQTTPacket/src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/paho_mqtt/MQTTPacket/src/MQTTSubscribeClient.d" -MT"src/paho_mqtt/MQTTPacket/src/MQTTSubscribeClient.o" -MT"src/paho_mqtt/MQTTPacket/src/MQTTSubscribeClient.d" -o "src/paho_mqtt/MQTTPacket/src/MQTTSubscribeClient.o" "../src/paho_mqtt/MQTTPacket/src/MQTTSubscribeClient.c"
+ 
+Building file: ../src/paho_mqtt/MQTTPacket/src/MQTTSubscribeServer.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=c11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/paho_mqtt/MQTTPacket/src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/paho_mqtt/MQTTPacket/src/MQTTSubscribeServer.d" -MT"src/paho_mqtt/MQTTPacket/src/MQTTSubscribeServer.o" -MT"src/paho_mqtt/MQTTPacket/src/MQTTSubscribeServer.d" -o "src/paho_mqtt/MQTTPacket/src/MQTTSubscribeServer.o" "../src/paho_mqtt/MQTTPacket/src/MQTTSubscribeServer.c"
+Finished building: ../src/paho_mqtt/MQTTPacket/src/MQTTPacket.c
+Finished building: ../src/paho_mqtt/MQTTPacket/src/MQTTSerializePublish.c
+ 
+Finished building: ../src/paho_mqtt/MQTTPacket/src/MQTTSubscribeClient.c
+ 
+Building file: ../src/paho_mqtt/MQTTPacket/src/MQTTUnsubscribeClient.c
+ 
+Building file: ../src/paho_mqtt/MQTTPacket/src/MQTTUnsubscribeServer.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=c11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/paho_mqtt/MQTTPacket/src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/paho_mqtt/MQTTPacket/src/MQTTUnsubscribeClient.d" -MT"src/paho_mqtt/MQTTPacket/src/MQTTUnsubscribeClient.o" -MT"src/paho_mqtt/MQTTPacket/src/MQTTUnsubscribeClient.d" -o "src/paho_mqtt/MQTTPacket/src/MQTTUnsubscribeClient.o" "../src/paho_mqtt/MQTTPacket/src/MQTTUnsubscribeClient.c"
+Finished building: ../src/paho_mqtt/MQTTPacket/src/MQTTSubscribeServer.c
+arm-none-eabi-gcc -std=c11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/paho_mqtt/MQTTPacket/src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/paho_mqtt/MQTTPacket/src/MQTTUnsubscribeServer.d" -MT"src/paho_mqtt/MQTTPacket/src/MQTTUnsubscribeServer.o" -MT"src/paho_mqtt/MQTTPacket/src/MQTTUnsubscribeServer.d" -o "src/paho_mqtt/MQTTPacket/src/MQTTUnsubscribeServer.o" "../src/paho_mqtt/MQTTPacket/src/MQTTUnsubscribeServer.c"
+ 
+Building file: ../src/paho_mqtt/MQTTClient-C/src/MQTTClient.c
+Building file: ../src/mqtt/MQTT_lpc1549.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=c11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/paho_mqtt/MQTTClient-C/src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/paho_mqtt/MQTTClient-C/src/MQTTClient.d" -MT"src/paho_mqtt/MQTTClient-C/src/MQTTClient.o" -MT"src/paho_mqtt/MQTTClient-C/src/MQTTClient.d" -o "src/paho_mqtt/MQTTClient-C/src/MQTTClient.o" "../src/paho_mqtt/MQTTClient-C/src/MQTTClient.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=c11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mqtt/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/mqtt/MQTT_lpc1549.d" -MT"src/mqtt/MQTT_lpc1549.o" -MT"src/mqtt/MQTT_lpc1549.d" -o "src/mqtt/MQTT_lpc1549.o" "../src/mqtt/MQTT_lpc1549.c"
+Finished building: ../src/paho_mqtt/MQTTPacket/src/MQTTUnsubscribeClient.c
+Finished building: ../src/paho_mqtt/MQTTPacket/src/MQTTUnsubscribeServer.c
+ 
+ 
+Building file: ../src/mqtt/esp8266_socket.c
+Building file: ../src/mqtt/serial_port.cpp
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=c11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mqtt/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/mqtt/esp8266_socket.d" -MT"src/mqtt/esp8266_socket.o" -MT"src/mqtt/esp8266_socket.d" -o "src/mqtt/esp8266_socket.o" "../src/mqtt/esp8266_socket.c"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/mqtt/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/mqtt/serial_port.d" -MT"src/mqtt/serial_port.o" -MT"src/mqtt/serial_port.d" -o "src/mqtt/serial_port.o" "../src/mqtt/serial_port.cpp"
+Finished building: ../src/mqtt/MQTT_lpc1549.c
+ 
+Building file: ../src/modbus/ModbusMaster.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/modbus/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/modbus/ModbusMaster.d" -MT"src/modbus/ModbusMaster.o" -MT"src/modbus/ModbusMaster.d" -o "src/modbus/ModbusMaster.o" "../src/modbus/ModbusMaster.cpp"
+Finished building: ../src/paho_mqtt/MQTTClient-C/src/MQTTClient.c
+ 
+Building file: ../src/modbus/ModbusRegister.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/modbus/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/modbus/ModbusRegister.d" -MT"src/modbus/ModbusRegister.o" -MT"src/modbus/ModbusRegister.d" -o "src/modbus/ModbusRegister.o" "../src/modbus/ModbusRegister.cpp"
+Finished building: ../src/mqtt/esp8266_socket.c
+ 
+Finished building: ../src/mqtt/serial_port.cpp
+Building file: ../src/modbus/SerialPort.cpp
+ 
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/modbus/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/modbus/SerialPort.d" -MT"src/modbus/SerialPort.o" -MT"src/modbus/SerialPort.d" -o "src/modbus/SerialPort.o" "../src/modbus/SerialPort.cpp"
+Building file: ../src/DigitalIoPin.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/DigitalIoPin.d" -MT"src/DigitalIoPin.o" -MT"src/DigitalIoPin.d" -o "src/DigitalIoPin.o" "../src/DigitalIoPin.cpp"
+Finished building: ../src/modbus/ModbusMaster.cpp
+Finished building: ../src/modbus/ModbusRegister.cpp
+ 
+ 
+Building file: ../src/I2C.cpp
+Building file: ../src/Imutex.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/I2C.d" -MT"src/I2C.o" -MT"src/I2C.d" -o "src/I2C.o" "../src/I2C.cpp"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/Imutex.d" -MT"src/Imutex.o" -MT"src/Imutex.d" -o "src/Imutex.o" "../src/Imutex.cpp"
+Finished building: ../src/modbus/SerialPort.cpp
+ 
+Building file: ../src/IntegerEdit.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/IntegerEdit.d" -MT"src/IntegerEdit.o" -MT"src/IntegerEdit.d" -o "src/IntegerEdit.o" "../src/IntegerEdit.cpp"
+Finished building: ../src/DigitalIoPin.cpp
+ 
+Building file: ../src/LiquidCrystal.cpp
+Invoking: MCU C++ Compiler
+Finished building: ../src/Imutex.cpp
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/LiquidCrystal.d" -MT"src/LiquidCrystal.o" -MT"src/LiquidCrystal.d" -o "src/LiquidCrystal.o" "../src/LiquidCrystal.cpp"
+Finished building: ../src/I2C.cpp
+ 
+ 
+Building file: ../src/LpcUart.cpp
+Building file: ../src/MQTT.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/LpcUart.d" -MT"src/LpcUart.o" -MT"src/LpcUart.d" -o "src/LpcUart.o" "../src/LpcUart.cpp"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/MQTT.d" -MT"src/MQTT.o" -MT"src/MQTT.d" -o "src/MQTT.o" "../src/MQTT.cpp"
+Finished building: ../src/LpcUart.cpp
+ 
+Building file: ../src/MenuItem.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/MenuItem.d" -MT"src/MenuItem.o" -MT"src/MenuItem.d" -o "src/MenuItem.o" "../src/MenuItem.cpp"
+Finished building: ../src/IntegerEdit.cpp
+Finished building: ../src/MQTT.cpp
+ 
+ 
+Building file: ../src/ModeEdit.cpp
+Finished building: ../src/LiquidCrystal.cpp
+Finished building: ../src/MenuItem.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/ModeEdit.d" -MT"src/ModeEdit.o" -MT"src/ModeEdit.d" -o "src/ModeEdit.o" "../src/ModeEdit.cpp"
+ 
+ 
+Building file: ../src/SimpleMenu.cpp
+Building file: ../src/cr_cpp_config.cpp
+Building file: ../src/cr_startup_lpc15xx.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/SimpleMenu.d" -MT"src/SimpleMenu.o" -MT"src/SimpleMenu.d" -o "src/SimpleMenu.o" "../src/SimpleMenu.cpp"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/cr_cpp_config.d" -MT"src/cr_cpp_config.o" -MT"src/cr_cpp_config.d" -o "src/cr_cpp_config.o" "../src/cr_cpp_config.cpp"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/cr_startup_lpc15xx.d" -MT"src/cr_startup_lpc15xx.o" -MT"src/cr_startup_lpc15xx.d" -o "src/cr_startup_lpc15xx.o" "../src/cr_startup_lpc15xx.cpp"
+Finished building: ../src/cr_startup_lpc15xx.cpp
+Finished building: ../src/cr_cpp_config.cpp
+ 
+ 
+Building file: ../src/crp.c
+Building file: ../src/main.cpp
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=c11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/main.d" -MT"src/main.o" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/SimpleMenu.cpp
+Finished building: ../src/crp.c
+ 
+ 
+Building file: ../src/retarget_uart.cpp
+Building file: ../src/socket_mqtt.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/retarget_uart.d" -MT"src/retarget_uart.o" -MT"src/retarget_uart.d" -o "src/retarget_uart.o" "../src/retarget_uart.cpp"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/socket_mqtt.d" -MT"src/socket_mqtt.o" -MT"src/socket_mqtt.d" -o "src/socket_mqtt.o" "../src/socket_mqtt.cpp"
+Finished building: ../src/ModeEdit.cpp
+Finished building: ../src/socket_mqtt.cpp
+ 
+ 
+Building file: ../src/sysinit.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=c11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\inc" -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/sysinit.d" -MT"src/sysinit.o" -MT"src/sysinit.d" -o "src/sysinit.o" "../src/sysinit.c"
+Finished building: ../src/retarget_uart.cpp
+ 
+Finished building: ../src/sysinit.c
+ 
+../src/main.cpp: In function 'int main()':
+../src/main.cpp:224:7: warning: unused variable 'buffer' [-Wunused-variable]
+  224 |  char buffer[150];
+      |       ^~~~~~
+../src/main.cpp:230:6: warning: unused variable 'current_t_freq' [-Wunused-variable]
+  230 |  int current_t_freq = 0;
+      |      ^~~~~~~~~~~~~~
+In file included from c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\map:61,
+                 from ../src/json.hpp:64,
+                 from ../src/MainHeader.h:36,
+                 from ../src/main.cpp:12:
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\stl_map.h: In member function 'std::map<_Key, _Tp, _Compare, _Alloc>::mapped_type& std::map<_Key, _Tp, _Compare, _Alloc>::operator[](std::map<_Key, _Tp, _Compare, _Alloc>::key_type&&) [with _Key = std::__cxx11::basic_string<char>; _Tp = nlohmann::basic_json<>; _Compare = std::less<std::__cxx11::basic_string<char> >; _Alloc = std::allocator<std::pair<const std::__cxx11::basic_string<char>, nlohmann::basic_json<> > >]':
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\stl_map.h:520:37: note: parameter passing for argument of type 'std::_Rb_tree<std::__cxx11::basic_string<char>, std::pair<const std::__cxx11::basic_string<char>, nlohmann::basic_json<> >, std::_Select1st<std::pair<const std::__cxx11::basic_string<char>, nlohmann::basic_json<> > >, std::less<std::__cxx11::basic_string<char> >, std::allocator<std::pair<const std::__cxx11::basic_string<char>, nlohmann::basic_json<> > > >::const_iterator' changed in GCC 7.1
+  520 |    __i = _M_t._M_emplace_hint_unique(__i, std::piecewise_construct,
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  521 |      std::forward_as_tuple(std::move(__k)),
+      |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  522 |      std::tuple<>());
+      |      ~~~~~~~~~~~~~~~                 
+In file included from c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\vector:72,
+                 from ../src/SimpleMenu.h:10,
+                 from ../src/MainHeader.h:27,
+                 from ../src/main.cpp:12:
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\vector.tcc: In member function 'void std::vector<_Tp, _Alloc>::reserve(std::vector<_Tp, _Alloc>::size_type) [with _Tp = nlohmann::basic_json<>; _Alloc = std::allocator<nlohmann::basic_json<> >]':
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\vector.tcc:85:36: note: parameter passing for argument of type 'std::move_iterator<nlohmann::basic_json<>*>' changed in GCC 7.1
+   85 |        __tmp = _M_allocate_and_copy(__n,
+      |                ~~~~~~~~~~~~~~~~~~~~^~~~~
+   86 |   _GLIBCXX_MAKE_MOVE_IF_NOEXCEPT_ITERATOR(this->_M_impl._M_start),
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   87 |   _GLIBCXX_MAKE_MOVE_IF_NOEXCEPT_ITERATOR(this->_M_impl._M_finish));
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\map:60,
+                 from ../src/json.hpp:64,
+                 from ../src/MainHeader.h:36,
+                 from ../src/main.cpp:12:
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\stl_tree.h: In member function 'std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::iterator std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_emplace_hint_unique(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::const_iterator, _Args&& ...) [with _Args = {const std::piecewise_construct_t&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&>, std::tuple<>}; _Key = std::__cxx11::basic_string<char>; _Val = std::pair<const std::__cxx11::basic_string<char>, nlohmann::basic_json<> >; _KeyOfValue = std::_Select1st<std::pair<const std::__cxx11::basic_string<char>, nlohmann::basic_json<> > >; _Compare = std::less<std::__cxx11::basic_string<char> >; _Alloc = std::allocator<std::pair<const std::__cxx11::basic_string<char>, nlohmann::basic_json<> > >]':
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\stl_tree.h:2460:7: note: parameter passing for argument of type 'std::_Rb_tree<std::__cxx11::basic_string<char>, std::pair<const std::__cxx11::basic_string<char>, nlohmann::basic_json<> >, std::_Select1st<std::pair<const std::__cxx11::basic_string<char>, nlohmann::basic_json<> > >, std::less<std::__cxx11::basic_string<char> >, std::allocator<std::pair<const std::__cxx11::basic_string<char>, nlohmann::basic_json<> > > >::const_iterator' changed in GCC 7.1
+ 2460 |       _Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\stl_algobase.h:66,
+                 from c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\char_traits.h:39,
+                 from c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\string:40,
+                 from ../src/MainHeader.h:19,
+                 from ../src/main.cpp:12:
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\stl_iterator_base_funcs.h: In function '_InputIterator std::next(_InputIterator, typename std::iterator_traits<_Iter>::difference_type) [with _InputIterator = std::_Rb_tree_const_iterator<std::pair<const std::__cxx11::basic_string<char>, nlohmann::basic_json<> > >]':
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\stl_iterator_base_funcs.h:213:5: note: parameter passing for argument of type 'std::_Rb_tree_const_iterator<std::pair<const std::__cxx11::basic_string<char>, nlohmann::basic_json<> > >' changed in GCC 7.1
+  213 |     next(_InputIterator __x, typename
+      |     ^~~~
+In file included from c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\vector:67,
+                 from ../src/SimpleMenu.h:10,
+                 from ../src/MainHeader.h:27,
+                 from ../src/main.cpp:12:
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\stl_vector.h: In member function 'std::vector<_Tp, _Alloc>::pointer std::vector<_Tp, _Alloc>::_M_allocate_and_copy(std::vector<_Tp, _Alloc>::size_type, _ForwardIterator, _ForwardIterator) [with _ForwardIterator = std::move_iterator<nlohmann::basic_json<>*>; _Tp = nlohmann::basic_json<>; _Alloc = std::allocator<nlohmann::basic_json<> >]':
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\stl_vector.h:1508:2: note: parameter passing for argument of type 'std::move_iterator<nlohmann::basic_json<>*>' changed in GCC 7.1
+ 1508 |  _M_allocate_and_copy(size_type __n,
+      |  ^~~~~~~~~~~~~~~~~~~~
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\stl_vector.h:1508:2: note: parameter passing for argument of type 'std::move_iterator<nlohmann::basic_json<>*>' changed in GCC 7.1
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\stl_vector.h:1514:35: note: parameter passing for argument of type 'std::move_iterator<nlohmann::basic_json<>*>' changed in GCC 7.1
+ 1514 |        std::__uninitialized_copy_a(__first, __last, __result,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1515 |        _M_get_Tp_allocator());
+      |        ~~~~~~~~~~~~~~~~~~~~~~      
+In file included from c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\map:60,
+                 from ../src/json.hpp:64,
+                 from ../src/MainHeader.h:36,
+                 from ../src/main.cpp:12:
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\stl_tree.h: In member function 'std::pair<std::_Rb_tree_node_base*, std::_Rb_tree_node_base*> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_get_insert_hint_unique_pos(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::const_iterator, const key_type&) [with _Key = std::__cxx11::basic_string<char>; _Val = std::pair<const std::__cxx11::basic_string<char>, nlohmann::basic_json<> >; _KeyOfValue = std::_Select1st<std::pair<const std::__cxx11::basic_string<char>, nlohmann::basic_json<> > >; _Compare = std::less<std::__cxx11::basic_string<char> >; _Alloc = std::allocator<std::pair<const std::__cxx11::basic_string<char>, nlohmann::basic_json<> > >]':
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\stl_tree.h:2195:5: note: parameter passing for argument of type 'std::_Rb_tree<std::__cxx11::basic_string<char>, std::pair<const std::__cxx11::basic_string<char>, nlohmann::basic_json<> >, std::_Select1st<std::pair<const std::__cxx11::basic_string<char>, nlohmann::basic_json<> > >, std::less<std::__cxx11::basic_string<char> >, std::allocator<std::pair<const std::__cxx11::basic_string<char>, nlohmann::basic_json<> > > >::const_iterator' changed in GCC 7.1
+ 2195 |     _Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\vector:66,
+                 from ../src/SimpleMenu.h:10,
+                 from ../src/MainHeader.h:27,
+                 from ../src/main.cpp:12:
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\stl_uninitialized.h: In function '_ForwardIterator std::__uninitialized_copy_a(_InputIterator, _InputIterator, _ForwardIterator, std::allocator<_Tp>&) [with _InputIterator = std::move_iterator<nlohmann::basic_json<>*>; _ForwardIterator = nlohmann::basic_json<>*; _Tp = nlohmann::basic_json<>]':
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\stl_uninitialized.h:323:5: note: parameter passing for argument of type 'std::move_iterator<nlohmann::basic_json<>*>' changed in GCC 7.1
+  323 |     __uninitialized_copy_a(_InputIterator __first, _InputIterator __last,
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\stl_uninitialized.h:323:5: note: parameter passing for argument of type 'std::move_iterator<nlohmann::basic_json<>*>' changed in GCC 7.1
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\stl_uninitialized.h:325:37: note: parameter passing for argument of type 'std::move_iterator<nlohmann::basic_json<>*>' changed in GCC 7.1
+  325 |     { return std::uninitialized_copy(__first, __last, __result); }
+      |              ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\stl_uninitialized.h: In function '_ForwardIterator std::uninitialized_copy(_InputIterator, _InputIterator, _ForwardIterator) [with _InputIterator = std::move_iterator<nlohmann::basic_json<>*>; _ForwardIterator = nlohmann::basic_json<>*]':
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\stl_uninitialized.h:125:5: note: parameter passing for argument of type 'std::move_iterator<nlohmann::basic_json<>*>' changed in GCC 7.1
+  125 |     uninitialized_copy(_InputIterator __first, _InputIterator __last,
+      |     ^~~~~~~~~~~~~~~~~~
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\stl_uninitialized.h:125:5: note: parameter passing for argument of type 'std::move_iterator<nlohmann::basic_json<>*>' changed in GCC 7.1
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\stl_uninitialized.h:150:15: note: parameter passing for argument of type 'std::move_iterator<nlohmann::basic_json<>*>' changed in GCC 7.1
+  147 |       return std::__uninitialized_copy<__is_trivial(_ValueType1)
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  148 |            && __is_trivial(_ValueType2)
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  149 |            && __assignable>::
+      |            ~~~~~~~~~~~~~~~~~~
+  150 |  __uninit_copy(__first, __last, __result);
+      |  ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\stl_uninitialized.h: In function '_ForwardIterator std::__uninitialized_move_if_noexcept_a(_InputIterator, _InputIterator, _ForwardIterator, _Allocator&) [with _InputIterator = nlohmann::basic_json<>*; _ForwardIterator = nlohmann::basic_json<>*; _Allocator = std::allocator<nlohmann::basic_json<> >]':
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\stl_uninitialized.h:347:2: note: parameter passing for argument of type 'std::move_iterator<nlohmann::basic_json<>*>' changed in GCC 7.1
+  346 |       return std::__uninitialized_copy_a
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  347 |  (_GLIBCXX_MAKE_MOVE_IF_NOEXCEPT_ITERATOR(__first),
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  348 |   _GLIBCXX_MAKE_MOVE_IF_NOEXCEPT_ITERATOR(__last), __result, __alloc);
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\stl_uninitialized.h: In static member function 'static _ForwardIterator std::__uninitialized_copy<_TrivialValueTypes>::__uninit_copy(_InputIterator, _InputIterator, _ForwardIterator) [with _InputIterator = std::move_iterator<nlohmann::basic_json<>*>; _ForwardIterator = nlohmann::basic_json<>*; bool _TrivialValueTypes = false]':
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\stl_uninitialized.h:84:9: note: parameter passing for argument of type 'std::move_iterator<nlohmann::basic_json<>*>' changed in GCC 7.1
+   84 |         __uninit_copy(_InputIterator __first, _InputIterator __last,
+      |         ^~~~~~~~~~~~~
+c:\nxp\mcuxpressoide_11.5.0_7232\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.5.0.202107051138\tools\arm-none-eabi\include\c++\10.3.1\bits\stl_uninitialized.h:84:9: note: parameter passing for argument of type 'std::move_iterator<nlohmann::basic_json<>*>' changed in GCC 7.1
+Finished building: ../src/main.cpp
+ 
+Building target: ventilation_project.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_board_nxp_lpcxpresso_1549\Debug" -L"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\Debug" -Xlinker -Map="ventilation_project.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "ventilation_system_Debug.ld" -o "ventilation_project.axf"  ./src/paho_mqtt/MQTTPacket/src/MQTTConnectClient.o ./src/paho_mqtt/MQTTPacket/src/MQTTConnectServer.o ./src/paho_mqtt/MQTTPacket/src/MQTTDeserializePublish.o ./src/paho_mqtt/MQTTPacket/src/MQTTFormat.o ./src/paho_mqtt/MQTTPacket/src/MQTTPacket.o ./src/paho_mqtt/MQTTPacket/src/MQTTSerializePublish.o ./src/paho_mqtt/MQTTPacket/src/MQTTSubscribeClient.o ./src/paho_mqtt/MQTTPacket/src/MQTTSubscribeServer.o ./src/paho_mqtt/MQTTPacket/src/MQTTUnsubscribeClient.o ./src/paho_mqtt/MQTTPacket/src/MQTTUnsubscribeServer.o  ./src/paho_mqtt/MQTTClient-C/src/MQTTClient.o  ./src/mqtt/MQTT_lpc1549.o ./src/mqtt/esp8266_socket.o ./src/mqtt/serial_port.o  ./src/modbus/ModbusMaster.o ./src/modbus/ModbusRegister.o ./src/modbus/SerialPort.o  ./src/DigitalIoPin.o ./src/I2C.o ./src/Imutex.o ./src/IntegerEdit.o ./src/LiquidCrystal.o ./src/LpcUart.o ./src/MQTT.o ./src/MenuItem.o ./src/ModeEdit.o ./src/SimpleMenu.o ./src/cr_cpp_config.o ./src/cr_startup_lpc15xx.o ./src/crp.o ./src/main.o ./src/retarget_uart.o ./src/socket_mqtt.o ./src/sysinit.o   -llpc_board_nxp_lpcxpresso_1549 -llpc_chip_15xx
+Memory region         Used Size  Region Size  %age Used
+       MFlash256:      140064 B       256 KB     53.43%
+      Ram0_16_32:        3020 B        32 KB      9.22%
+          Ram2_4:          0 GB         4 KB      0.00%
+Finished building target: ventilation_project.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "ventilation_project.axf"; # arm-none-eabi-objcopy -v -O binary "ventilation_project.axf" "ventilation_project.bin" ; # checksum -p LPC1549 -d "ventilation_project.bin";
+   text	   data	    bss	    dec	    hex	filename
+ 137568	   2496	    524	 140588	  2252c	ventilation_project.axf
+ 
+
+04:24:10 Build Finished. 0 errors, 2 warnings. (took 5s.50ms)
+

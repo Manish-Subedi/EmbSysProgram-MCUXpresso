@@ -1,0 +1,86 @@
+/*
+ * ITMhandler.h
+ *
+ *  Created on: 8 Sep 2022
+ *      Author: Manish
+ */
+
+#ifndef ITMHANDLER_H_
+#define ITMHANDLER_H_
+#include "ITM_write.h"
+#include <cstdio>
+
+class ITMhandler {
+	public:
+		ITMhandler(){
+			ITM_init();
+		}
+		virtual ~ITMhandler(){};
+		// third exercise
+		void print(double v3, bool b){
+			if(b){
+				snprintf(buffer, 50, "average: %.2f counter cycles\n", v3);
+				ITM_write(buffer);
+			}
+			else if(!b){
+				snprintf(buffer, 50, "average: %.2f microseconds\n", v3);
+				ITM_write(buffer);
+			}
+
+		}
+		// ex3, print cycles for each press(test)
+		/*
+		void print(int v1, int v2, bool b=true){
+			snprintf(buffer, 100, "Count: %d, diff: %d\n", v1, v2);
+			ITM_write(buffer);
+
+		}*/
+		// third exercise, print sorted diff
+		void print(int v1){
+			snprintf(buffer, 100, "diff: %d\n", v1);
+			ITM_write(buffer);
+		}
+		// first exercise
+		void print(int button, int count)
+		{
+			snprintf (buffer, 100, "SW%d pressed for %d ms\n", button, count);
+			ITM_write(buffer);
+		}
+
+		//second exercise
+		void print(bool r, bool g, bool b, int position)
+		{
+				char *sr, *sg, *sb;
+				const char * array[] = {
+				    "",
+				    "",
+				    "",
+				};
+				char *cursor="<--";
+				array[position]=cursor;
+				if(r){
+					sr="On";
+				}
+				else sr="Off";
+
+				if(g){
+					sg="On";
+				}
+				else sg="Off";
+
+			    if(b){
+					sb="On";
+				}
+				else sb="Off";
+				snprintf (buffer, 150, "Select led:\nRed      %s    %s\nGreen    %s    %s\nBlue     %s    %s\n--------\n-----------\n", sr,array[0], sg,array[1], sb,array[2] );
+				ITM_write(buffer);
+			}
+	private:
+		int v1, v2, v4, button, count;
+		double v3;
+		bool r,  g,  b;
+		char buffer[150];
+
+};
+
+#endif /* ITMHANDLER_H_ */

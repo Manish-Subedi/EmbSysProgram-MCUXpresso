@@ -1,0 +1,51 @@
+03:13:44 **** Build of configuration Debug for project ventilation_system ****
+make -r -j4 all 
+Building file: ../src/paho_mqtt/MQTTClient-C/src/MQTTClient.c
+Building file: ../src/modbus/ModbusMaster.cpp
+Building file: ../src/modbus/ModbusRegister.cpp
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=c11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/paho_mqtt/MQTTClient-C/src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/paho_mqtt/MQTTClient-C/src/MQTTClient.d" -MT"src/paho_mqtt/MQTTClient-C/src/MQTTClient.o" -MT"src/paho_mqtt/MQTTClient-C/src/MQTTClient.d" -o "src/paho_mqtt/MQTTClient-C/src/MQTTClient.o" "../src/paho_mqtt/MQTTClient-C/src/MQTTClient.c"
+Invoking: MCU C++ Compiler
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/modbus/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/modbus/ModbusMaster.d" -MT"src/modbus/ModbusMaster.o" -MT"src/modbus/ModbusMaster.d" -o "src/modbus/ModbusMaster.o" "../src/modbus/ModbusMaster.cpp"
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/modbus/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/modbus/ModbusRegister.d" -MT"src/modbus/ModbusRegister.o" -MT"src/modbus/ModbusRegister.d" -o "src/modbus/ModbusRegister.o" "../src/modbus/ModbusRegister.cpp"
+Building file: ../src/modbus/SerialPort.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/modbus/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/modbus/SerialPort.d" -MT"src/modbus/SerialPort.o" -MT"src/modbus/SerialPort.d" -o "src/modbus/SerialPort.o" "../src/modbus/SerialPort.cpp"
+Finished building: ../src/paho_mqtt/MQTTClient-C/src/MQTTClient.c
+ 
+Building file: ../src/DigitalIoPin.cpp
+Finished building: ../src/modbus/ModbusRegister.cpp
+Finished building: ../src/modbus/SerialPort.cpp
+Invoking: MCU C++ Compiler
+ 
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/DigitalIoPin.d" -MT"src/DigitalIoPin.o" -MT"src/DigitalIoPin.d" -o "src/DigitalIoPin.o" "../src/DigitalIoPin.cpp"
+ 
+Building file: ../src/I2C.cpp
+Building file: ../src/Imutex.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/I2C.d" -MT"src/I2C.o" -MT"src/I2C.d" -o "src/I2C.o" "../src/I2C.cpp"
+Finished building: ../src/modbus/ModbusMaster.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/Imutex.d" -MT"src/Imutex.o" -MT"src/Imutex.d" -o "src/Imutex.o" "../src/Imutex.cpp"
+ 
+Building file: ../src/IntegerEdit.cpp
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -std=c++11 -DDEBUG -D__CODE_RED -D__NEWLIB__ -DCORE_M3 -D__USE_LPCOPEN -DCPP_USE_HEAP -D__LPC15XX__ -I"C:\Users\Manish\Documents\MCUXpressoIDE_11.5.0_7232\embSysPro\lpc_chip_15xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m3 -mthumb -fstack-usage -MMD -MP -MF"src/IntegerEdit.d" -MT"src/IntegerEdit.o" -MT"src/IntegerEdit.d" -o "src/IntegerEdit.o" "../src/IntegerEdit.cpp"
+../src/DigitalIoPin.cpp:11:10: fatal error: board.h: No such file or directory
+   11 | #include "board.h"
+      |          ^~~~~~~~~
+compilation terminated.
+make[1]: *** [src/subdir.mk:72: src/DigitalIoPin.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+Finished building: ../src/Imutex.cpp
+Finished building: ../src/I2C.cpp
+ 
+ 
+Finished building: ../src/IntegerEdit.cpp
+ 
+make: *** [makefile:57: all] Error 2
+"make -r -j4 all" terminated with exit code 2. Build might be incomplete.
+
+03:13:45 Build Failed. 4 errors, 0 warnings. (took 970ms)
+

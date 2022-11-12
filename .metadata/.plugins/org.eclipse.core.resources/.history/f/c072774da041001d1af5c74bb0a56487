@@ -1,0 +1,41 @@
+/*
+ * State.cpp
+ *
+ *  Created on: 30 Sep 2022
+ *      Author: Manish
+ */
+
+#include "State.h"
+#include "DigitalIoPin.h"
+
+State::State(DigitalIoPin *led_1=nullptr, DigitalIoPin *led_2=nullptr, DigitalIoPin *led_3=nullptr): led_1{led_1}, led_2{led_2}, led_3{led_3} {
+	// TODO Auto-generated constructor stub
+	currentState = eInit;
+}
+void State::toogleState(State &state){
+	if(state == eLunch){
+		led_1->write(!state);
+		currentState = e;
+		//led_3->write(state);
+	}
+
+	/*if(currentState == lunch){
+		led_1->write(!state);
+		led_2->write(state);
+		led_3->write(state);
+	}
+	if(curentState == night){
+		led_1->write(!state);
+		led_2->write(!state);
+		led_3->write(!state);
+	}
+	if(currentState == cold){
+
+	}*/
+}
+
+
+State::~State() {
+	// TODO Auto-generated destructor stub
+}
+

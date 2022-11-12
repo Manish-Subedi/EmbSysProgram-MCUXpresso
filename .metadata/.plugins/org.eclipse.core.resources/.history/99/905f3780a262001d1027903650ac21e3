@@ -1,0 +1,77 @@
+/*
+===============================================================================
+ Name        : main.c
+ Author      : Manish Subedi
+ Version     :
+ Copyright   : $(copyright)
+ Description : main definition
+===============================================================================
+*/
+
+#if 1
+#if defined (__USE_LPCOPEN)
+#if defined(NO_BOARD_LIB)
+#include "chip.h"
+#else
+#include "board.h"
+#endif
+#endif
+
+#include <cr_section_macros.h>
+#include "SleepMilli.h"
+
+#define TICKRATE_HZ1 (1000)
+
+// TODO: insert other definitions and declarations here
+
+int main(void) {
+
+#if defined (__USE_LPCOPEN)
+    // Read clock settings and update SystemCoreClock variable
+    SystemCoreClockUpdate();
+#if !defined(NO_BOARD_LIB)
+    // Set up and initialize all required blocks and
+    // functions related to the board hardware
+    Board_Init();
+    // Set the LED to the state of "On"
+    //Board_LED_Set(0, true);
+#endif
+#endif
+
+    // TODO: insert code here
+    uint32_t sysTickRate;
+    Chip_Clock_SetSysTickClockDiv(1);
+    sysTickRate = Chip_Clock_GetSysTickClockRate();
+    SysTick_Config(sysTickRate / TICKRATE_HZ1);
+
+    Chip_IOCON_PinMuxSet(LPC_IOCON, 0, 17, (IOCON_MODE_PULLUP | IOCON_DIGMODE_EN | IOCON_INV_EN));
+    Chip_GPIO_SetPinDIRInput(LPC_GPIO, 0, 17);
+
+    SleepMilli sleep;
+
+    // Force the counter to be placed into memory
+    volatile static int i = 0;
+    // Enter an infinite loop, just incrementing a counter
+    while(1) {
+    	//read the state of the button
+    	bool state = Chip_GPIO_GetPinState(LPC_GPIO, 0, 17);
+    	if(state){
+    		Board_LED_Set(0, true);
+    		sleep.Sleep(1000);
+    		Board_LED_Set(0, false);
+    		Board_LED_Set(1, true);
+    		sleep.Sleep(1000);
+			Board_LED_Set(1, false);
+			Board_LED_Set(2, true);
+			sleep.Sleep(1000);
+			Board_LED_Set(2, false);
+    	}
+        i++ ;
+        // "Dummy" NOP to allow source level single
+        // stepping of tight while() loop
+        __asm volatile ("nop");
+        //state = !state;
+    }
+    return 0 ;
+}
+#endif

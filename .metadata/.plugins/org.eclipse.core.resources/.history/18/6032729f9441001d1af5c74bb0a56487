@@ -1,0 +1,20 @@
+/*
+ * State.cpp
+ *
+ *  Created on: 30 Sep 2022
+ *      Author: Manish
+ */
+
+#include "State.h"
+
+State::State() {
+	// TODO Auto-generated constructor stub
+	currentState = Init;
+}
+
+
+
+State::~State() {
+	// TODO Auto-generated destructor stub
+}
+

@@ -1,0 +1,4 @@
+../src/Dice.cpp:13:1:Dice::Dice()	32	static
+../src/Dice.cpp:30:6:void Dice::Show(int)	16	static
+../src/Dice.cpp:86:1:Dice::~Dice()	16	static
+../src/Dice.cpp:86:1:virtual Dice::~Dice()	16	static

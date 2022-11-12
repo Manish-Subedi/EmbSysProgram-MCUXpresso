@@ -1,0 +1,25 @@
+/*
+ * Neon.h
+ *
+ *  Created on: 1 Oct 2022
+ *      Author: Manish
+ */
+
+#ifndef NEON_H_
+#define NEON_H_
+
+class Neon {
+public:
+	Neon(DigitalIoPin *led_1, DigitalIoPin *led_2, DigitalIoPin *led_3);
+	virtual ~Neon();
+
+	enum state { eInit, eLunch, eNight, eCold };
+private:
+	state currentState;
+	bool led_state = false;
+	DigitalIoPin *led_1;
+	DigitalIoPin *led_2;
+	DigitalIoPin *led_3;
+};
+
+#endif /* NEON_H_ */
